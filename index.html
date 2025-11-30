@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./svg/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -16,7 +18,7 @@
     <header class="header">
       <div class="header__text-container center">
         <h1 class="header__text-container-title">&lt;/HTML&gt;</h1>
-        <h2 class="header__text-container-subtitle">закрывающий тег</h2>
+        <p class="header__text-container-subtitle">закрывающий тег<p/>
       </div>
     </header>
 
@@ -26,12 +28,10 @@
 
         <!-- CARD 1: Фритрек и нулевой спринт -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">
-            Фритрек и нулевой спринт: Подготовка к работе
-          </h3>
+          <h2 class="card-container_item-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;/HTML&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -39,12 +39,12 @@
               основами и настроиться на учёбу. И, возможно, подумать, как новые
               знания могут повлиять на ваше будущее.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний о начале обучения.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -62,10 +62,10 @@
 
         <!-- CARD 2: 1 спринт: Я — чистый лист -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">1 спринт: Я — чистый лист</h3>
+          <h2 class="card-container_item-title">1 спринт: Я — чистый лист</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;/HTML&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__grayscale" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image grayscale" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -75,12 +75,12 @@
               за этим ощущением скрываются более глубокие вопросы: с чего
               начать? а вдруг будет слишком сложно? что, если я не справлюсь?
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний о начале первого спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -98,12 +98,10 @@
 
         <!-- CARD 3: 1 спринт: А если не получится? -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">
-            1 спринт: А если не получится?
-          </h3>
+          <h2 class="card-container_item-title">1 спринт: А если не получится?</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;CSS&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__saturate" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image saturate"/>
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -111,12 +109,12 @@
               могла быстро померкнуть и смениться ожиданием провала. Или вы,
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний об окончании первого спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -134,10 +132,10 @@
 
         <!-- CARD 4: 2 спринт: Погоня за идеалом -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">2 спринт: Погоня за идеалом</h3>
+          <h2 class="card-container_item-title">2 спринт: Погоня за идеалом</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;desigions&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__hue-rotate" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class=" card__image hue-rotate"/>
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -147,12 +145,12 @@
               подвержены перфекционизму и вместо того, чтобы сделать идеально,
               старались просто сделать.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний о начале второго спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -170,10 +168,10 @@
 
         <!-- CARD 5: 2 спринт: О тех, кто рядом -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">2 спринт: О тех, кто рядом</h3>
+          <h2 class="card-container_item-title">2 спринт: О тех, кто рядом</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">care</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__invert" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image invert" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -184,12 +182,12 @@
               поддавался. Осваивать что-то новое легче, когда рядом есть
               единомышленники, не правда ли?
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний об окончании второго спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -207,12 +205,10 @@
 
         <!-- CARD 6: 3 спринт: Обходные стратегии -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">
-            3 спринт: Обходные стратегии
-          </h3>
+          <h2 class="card-container_item-title">3 спринт: Обходные стратегии</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;support&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__sepia" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image sepia" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -220,12 +216,12 @@
               вам могло показаться, что решения просто иссякли. Значит, пришло
               время посмотреть на задачу под другим углом.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний о начале третьего спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -243,12 +239,10 @@
 
         <!-- CARD 7: 3 спринт: Когда опускаются руки -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">
-            3 спринт: Когда опускаются руки
-          </h3>
+          <h2 class="card-container_item-title">3 спринт: Когда опускаются руки</h2>
           <div class="image-wrapper blur">
-            <label class="image-wrapper_label">&lt;lifes-style: none&gt;</label>
-            <img src="./images/bus.png" alt=Автобус" class="bus__blur" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image blur" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -258,12 +252,12 @@
               пожить. В такие моменты очень нужна концентрация. Вспомните,
               откуда вы её черпали.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место для ваших воспоминаний об окончании третьего спринта.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -281,10 +275,10 @@
 
         <!-- CARD 8: «Сейчас я здесь» -->
         <article class="card-container_item">
-          <h3 class="card-container_item-title">«Сейчас я здесь»</h3>
+          <h2 class="card-container_item-title">«Сейчас я здесь»</h2>
           <div class="image-wrapper">
-            <label class="image-wrapper_label">&lt;experience&gt;</label>
-            <img src="./images/bus.png" alt="Автобус" class="bus__sepia-rotate" />
+            <span class="image-wrapper_label">&lt;/HTML&gt;</span>
+            <img src="./images/bus.png" alt="Автобус" class="card__image sepia-rotate" />
           </div>
           <div class="text-wrapper">
             <p class="text-wrapper-text">
@@ -295,13 +289,13 @@
               получится, но это тот случай, когда важен сам процесс познания.
               Ведь часто путь — и есть результат.
             </p>
-            <p class="text-wrapper-memories">
+            <p class="text-wrapper-text">
               Место, чтобы остановиться, подумать и написать, что вы чувствуете
               в этой точке пути.
             </p>
           </div>
           <div class="card__button-wrapper">
-            <button class="card__icon-button" type="button">
+            <button class="card__icon-button" type="button" aria-label="Поставить лайк">
               <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color)"/>
@@ -317,10 +311,7 @@
           </div>
         </article>
       </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="center save__button-wrapper">
+       <div class="center save__button-wrapper">
       <button
         class="button save__button"
         type="button"
@@ -332,8 +323,7 @@
         </svg>
         <span class="button__text"> Сохранить на память </span>
       </button>
-    </footer>
-
+    </div>
     <!-- MODAL -->
     <dialog id="dialog" class="modal">
       <div class="dialog-text-wrapper">
@@ -350,8 +340,7 @@
         <span class="button__text">Ок</span>
       </button>
     </dialog>
-
-
     <script src="./scripts/like.js"></script>
+    </main>
   </body>
 </html>
