@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" var(--font-weight-normal);
+  font-variation-settings: 'wght' var(--font-weight-normal);
   margin-top: 100px;
   font-size: var(--main-font-size);
   background-attachment: fixed;
@@ -24,7 +24,6 @@
 }
 
 .center {
-  inline-size: min(var(--header-width, 700px), 100% - 20px);
   margin-inline: auto;
 }
 
@@ -47,7 +46,7 @@
 }
 
 .button::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -71,6 +70,7 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 90%;
+  text-transform: uppercase;
 }
 
 .header__text-container {
@@ -112,12 +112,13 @@
 .card-container_item {
   background-color: var(--main-background-color);
   border: 2px solid var(--main-text-color);
-  inline-size: min(var(--header-width, 700px), 100% - 20px);
+  width: var(--header-width);
+  margin: 0 auto;
 }
 
 .card-container_item-title {
-  font-variation-settings: "wght" 715;
-  padding: 3px 10px;
+  font-variation-settings: 'wght' 715;
+  padding: 3px 24px 3px 10px;
   font-size: var(--main-font-size);
   border-bottom: 2px solid var(--main-text-color);
 }
@@ -143,10 +144,8 @@
   top: 25px;
   right: clamp(0.813rem, 0.548rem + 1.13vw, 1.563rem);
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--main-background-color, #fff),
-    0 1px var(--main-background-color, #fff),
-    1px 0 var(--main-background-color, #fff),
-    0 -1px var(--main-background-color, #fff);
+  text-shadow: -1px 0 var(--main-background-color, #fff), 0 1px var(--main-background-color, #fff),
+    1px 0 var(--main-background-color, #fff), 0 -1px var(--main-background-color, #fff);
   z-index: 1;
 }
 
@@ -193,7 +192,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 25px;
+  padding: 25px 25px 0 25px;
 }
 
 .card__button-wrapper {
@@ -236,12 +235,12 @@
 
 .like-icon .core {
   fill: transparent;
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon .main-body {
   fill: transparent;
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover {
@@ -330,6 +329,9 @@
   position: relative;
   z-index: 3;
 }
+.save__button:hover .floppy {
+  filter: brightness(0) invert(1);
+}
 
 .modal[open] {
   width: min(353px, 100% - 40px);
@@ -349,9 +351,10 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 150%;
-  font-variation-settings: "wght" 415;
+  font-weight: var(--font-weight-normal, 400);
   text-transform: uppercase;
   color: var(--main-text-color);
+  margin: 0;
 }
 
 .dialog-text-wrapper {
@@ -373,31 +376,23 @@
   text-transform: uppercase;
 }
 
-@keyframes scale-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks-animation {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @media (width <= 375px) {
+
+  /* Карточка на всю ширину экрана */
+  .card-container_item {
+    width: 100vw;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Убираем возможные отступы у родителя */
+  .card-container {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+  }
+
   .page {
     margin-top: 50px;
   }
@@ -405,6 +400,10 @@
   .header__text-container {
     padding: 80px 0;
     gap: 15px;
+    inline-size: 100%;
+    margin-inline: 0;
+    border-left: none;
+    border-right: none;
   }
 
   .content {
@@ -424,7 +423,6 @@
   .image-wrapper_label {
     top: 15px;
     right: 15px;
-    font-size: 12px;
   }
 
   .text-wrapper {
@@ -439,6 +437,8 @@
   .modal[open] {
     gap: 20px;
     padding: 20px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
   }
 
   .dialog-text-wrapper {
@@ -448,19 +448,5 @@
   .modal[open] .floppy {
     width: 28px;
     height: 28px;
-  }
-}
-
-@media (width >= 1440px) {
-  .center {
-    inline-size: min(700px, 100% - 40px);
-  }
-
-  .card-container_item {
-    inline-size: min(700px, 100% - 40px);
-  }
-
-  .header__text-container {
-    inline-size: min(700px, 100% - 40px);
   }
 }
