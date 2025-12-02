@@ -11,7 +11,6 @@
   --main-background-color: #fff;
   --contour-color: #000;
   --animation-fill-color: #f00;
-  
   --header-width: clamp(min(100%, 375px), 50vw, 700px);
   --title-font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
   --card-container-gap: 49px;

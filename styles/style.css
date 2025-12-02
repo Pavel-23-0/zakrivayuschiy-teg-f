@@ -1,8 +1,20 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" var(--font-weight-normal);
+  font-variation-settings: 'wght' var(--font-weight-normal);
   margin-top: 100px;
   font-size: var(--main-font-size);
   background-attachment: fixed;
@@ -12,8 +24,8 @@
 }
 
 .center {
-  inline-size: var(--header-width);
-  margin-inline: auto;
+  width: var(--header-width);
+  margin: auto;
 }
 
 .button {
@@ -23,6 +35,7 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   z-index: 1;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -34,7 +47,7 @@
 }
 
 .button::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -58,6 +71,7 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 90%;
+  text-transform: uppercase;
 }
 
 .header__text-container {
@@ -65,12 +79,14 @@
   font-family: var(--accent-font, sans-serif);
   display: flex;
   flex-direction: column;
-  padding: 120px 0;
+  padding: clamp(7.5rem, 6.346rem + 4.92vw, 7.5rem) 0;
   text-align: center;
   align-items: center;
   justify-content: center;
   gap: 20px;
   border: 2px solid var(--main-text-color);
+  margin-inline: auto;
+  inline-size: min(var(--header-width, 700px), 100% - 20px);
 }
 
 .header__text-container-title {
@@ -91,27 +107,34 @@
   flex-direction: column;
   gap: var(--card-container-gap);
   overflow: hidden;
+  align-items: center;
 }
 
 .card-container_item {
   background-color: var(--main-background-color);
   border: 2px solid var(--main-text-color);
+  width: var(--header-width);
+  margin: 0 auto;
 }
 
 .card-container_item-title {
-  font-variation-settings: "wght" 715;
+  font-variation-settings: 'wght' 715;
   padding: 3px 24px 3px 10px;
   font-size: var(--main-font-size);
+  border-bottom: 2px solid var(--main-text-color);
 }
 
 .image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .image-wrapper img {
   object-fit: cover;
   width: 100%;
+  height: auto;
   object-position: center;
+  display: block;
 }
 
 .image-wrapper_label {
@@ -120,12 +143,10 @@
   opacity: 0.5;
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: clamp(0.813rem, 0.548rem + 1.13vw, 1.563rem);
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--main-background-color, #fff),
-    0 1px var(--main-background-color, #fff),
-    1px 0 var(--main-background-color, #fff),
-    0 -1px var(--main-background-color, #fff);
+  text-shadow: -1px 0 var(--main-background-color, #fff), 0 1px var(--main-background-color, #fff),
+    1px 0 var(--main-background-color, #fff), 0 -1px var(--main-background-color, #fff);
   z-index: 1;
 }
 
@@ -180,16 +201,19 @@
   gap: 5px;
   align-items: center;
   justify-content: end;
-  margin-top: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
+  margin: 25px;
 }
 
 .card__icon-button {
-  padding: 9px 0 0 0;
+  padding: 0;
   background: transparent;
   transition: background-color 0.3s ease;
   border: 2px solid transparent;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -212,12 +236,12 @@
 
 .like-icon .core {
   fill: transparent;
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon .main-body {
   fill: transparent;
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:hover {
@@ -272,9 +296,12 @@
 }
 
 .card__like-button {
-  width: 130px;
+  min-width: 130px;
   height: 38px;
   border: 2px solid var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .save__button-wrapper {
@@ -290,21 +317,31 @@
   justify-content: center;
   gap: 8px;
   border: 2px solid var(--main-text-color);
-  padding: 15px 21px; /* Упрощено написание padding */
+  padding: 15px 21px;
   font-size: 14px;
   text-wrap: nowrap;
+  position: relative;
+  z-index: 2;
 }
 
 .floppy {
   width: 21px;
   height: 21px;
+  position: relative;
+  z-index: 3;
+}
+.save__button:hover .floppy {
+  filter: brightness(0) invert(1);
 }
 
 .modal[open] {
-  width: 353px;
+  width: min(353px, 100% - 40px);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 30px;
+  background: var(--main-background-color);
+  border: 2px solid var(--main-text-color);
 }
 
 .modal::backdrop {
@@ -315,8 +352,10 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 150%;
-  font-variation-settings: "wght" 400;
+  font-weight: var(--font-weight-normal, 400);
   text-transform: uppercase;
+  color: var(--main-text-color);
+  margin: 0;
 }
 
 .dialog-text-wrapper {
@@ -329,8 +368,86 @@
 .modal[open] .floppy {
   width: 39px;
   height: 39px;
+  flex-shrink: 0;
 }
 
 .modal__button {
   border: 2px solid var(--main-text-color);
+  height: 38px;
+  text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+
+  /* Карточка на всю ширину экрана */
+  .card-container_item {
+    width: 100vw;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Убираем возможные отступы у родителя */
+  .card-container {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .page {
+    margin-top: 50px;
+  }
+
+  .header__text-container {
+    padding: 80px 0;
+    gap: 15px;
+    inline-size: 100%;
+    margin-inline: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+
+  .save__button {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .save__button .floppy {
+    width: 28px;
+    height: 28px;
+  }
+
+  .image-wrapper_label {
+    top: 15px;
+    right: 15px;
+  }
+
+  .text-wrapper {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .card__button-wrapper {
+    margin: 15px;
+  }
+
+  .modal[open] {
+    gap: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+
+  .dialog-text-wrapper {
+    gap: 15px;
+  }
+
+  .modal[open] .floppy {
+    width: 28px;
+    height: 28px;
+  }
 }
