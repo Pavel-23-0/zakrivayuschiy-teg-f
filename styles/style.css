@@ -378,7 +378,6 @@
 
 @media (width <= 375px) {
 
-  /* Карточка на всю ширину экрана */
   .card-container_item {
     width: 100vw;
     margin: 0;
@@ -386,7 +385,6 @@
     border-right: none;
   }
 
-  /* Убираем возможные отступы у родителя */
   .card-container {
     padding: 0;
     margin: 0;
