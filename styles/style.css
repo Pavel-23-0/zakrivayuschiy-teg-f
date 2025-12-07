@@ -24,7 +24,8 @@
 }
 
 .center {
-  margin-inline: auto;
+  width: var(--header-width);
+  margin: auto;
 }
 
 .button {
@@ -70,6 +71,10 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 90%;
+  text-transform: none;
+}
+
+.button__text-uppercase {
   text-transform: uppercase;
 }
 
@@ -328,9 +333,9 @@
   height: 21px;
   position: relative;
   z-index: 3;
-}
-.save__button:hover .floppy {
-  filter: brightness(0) invert(1);
+  mix-blend-mode: difference;
+  fill: currentColor;
+  color: var(--main-background-color);
 }
 
 .modal[open] {
@@ -381,8 +386,6 @@
   .card-container_item {
     width: 100vw;
     margin: 0;
-    border-left: none;
-    border-right: none;
   }
 
   .card-container {
@@ -391,23 +394,12 @@
     width: 100vw;
   }
 
-  .page {
-    margin-top: 50px;
-  }
-
   .header__text-container {
-    padding: 80px 0;
-    gap: 15px;
-    inline-size: 100%;
-    margin-inline: 0;
-    border-left: none;
-    border-right: none;
-  }
-
-  .content {
-    margin-top: 50px;
-  }
-
+  inline-size: 100%;
+  margin-inline: 0;
+  border-left: none;
+  border-right: none;
+}
   .save__button {
     flex-direction: column;
     padding: 10px 15px;
